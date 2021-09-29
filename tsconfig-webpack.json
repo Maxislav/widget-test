@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+
+    "target": "es6",
+    "module": "commonjs",
+    "sourceMap": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "removeComments": true,
+    "types": [
+      "node"
+    ],
+    "esModuleInterop": true
+  },
+  "files": ["webpack.config.ts"],
+  "filesGlob": [
+    "./src/types.d.ts",
+    "!./node_modules/**/*.ts"
+  ],
+
+  "exclude": [
+    "webpack.config.ts",
+    "src/**",
+    "dist/**",
+    "lib",
+    "**/node_modules/**"
+  ]
+}
