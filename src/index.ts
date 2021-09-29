@@ -1,3 +1,3 @@
 import './map/map';
 
-console.log('loadedff')
+console.log('hello');
