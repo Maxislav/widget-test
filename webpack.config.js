@@ -7,13 +7,18 @@ module.exports = function (env, args) {
   return {
     entry: {
       app: [
-        './src/index.ts'
+     /*   './libs/runtime.js',
+        './libs/polyfills.js',
+        './libs/main.js',*/
+        './src/index.ts',
       ]
     },
     output: {
       path: path.resolve(__dirname, 'dist'),
       publicPath: "",
-      filename: "widget.[name].[chunkhash].min.js",
+      // TODO add hash to js file
+      // filename: "widget.[name].[chunkhash].min.js",
+      filename: "widget.[name].min.js",
     },
     devtool: args.mode === 'development' && 'source-map',
     resolve: {
@@ -59,7 +64,7 @@ module.exports = function (env, args) {
           exclude: [/node_modules/],
           use: [
             {
-              loader: 'awesome-typescript-loader',
+              loader: 'ts-loader',
             }
           ]
         }
